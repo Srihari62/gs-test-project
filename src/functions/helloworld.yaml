@@ -1,0 +1,5 @@
+id: helloworld
+tasks:
+  - id: first
+    fn: com.gs.return
+    args: Hello

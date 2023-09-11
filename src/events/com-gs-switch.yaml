@@ -1,0 +1,14 @@
+http.post./test/switch:
+  summary: switch
+  description: switch
+  fn: com-gs-switch
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

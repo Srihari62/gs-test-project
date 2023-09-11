@@ -1,0 +1,16 @@
+http.get./transform:
+  fn: transform
+  params:
+  - name: world
+    in: query # same as open api spec: one of cookie, path, query, header
+    required: true
+    allow_empty_value: false
+    schema:
+      type: string 
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: string
+        

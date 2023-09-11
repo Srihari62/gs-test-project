@@ -1,0 +1,11 @@
+http.get./helloworld:
+  fn: helloworld
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string

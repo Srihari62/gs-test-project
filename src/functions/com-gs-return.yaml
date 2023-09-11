@@ -1,0 +1,15 @@
+id: helloworld
+tasks:
+  - id: first
+    fn: com.gs.return
+    args: 
+      data: |
+        <js%
+          {
+            let data = {};
+            data.body = inputs.body;
+            data.name = inputs.headers.name
+            data.city = inputs.params.city
+            return data;
+          }
+        %>

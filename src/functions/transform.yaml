@@ -1,0 +1,9 @@
+summary: Returning hello world
+tasks:
+  - id: return_hello_world
+    fn: com.gs.return
+    args: 'Hello'
+
+  - id: return_with_status
+    fn: com.gs.transform 
+    args: <% outputs.return_hello_world.data + inputs.query.world %>

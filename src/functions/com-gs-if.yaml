@@ -1,0 +1,32 @@
+summary: Greet the developer'
+tasks:
+  - id: if
+    fn: com.gs.if
+    condition: <% inputs.query.greet == 'hello' %>
+    tasks:
+      - id: step1
+        fn: com.gs.return
+        args: 'Hello!'
+
+  - id: elif1
+    fn: com.gs.elif
+    condition: <% inputs.query.greet == 'pavan' %>
+    tasks:
+      - id: step2
+        fn: com.gs.return
+        args: 'Hello pavan'
+
+  - id: elif2
+    fn: com.gs.elif
+    condition: <% inputs.query.greet == 'hari' %>
+    tasks:
+      - id: step3
+        fn: com.gs.return
+        args: 'Hello Hari'
+
+  - id: else
+    fn: com.gs.else
+    tasks:
+      - id: step4
+        fn: com.gs.return
+        args: 'Hi developer'

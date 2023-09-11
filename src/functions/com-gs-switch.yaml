@@ -1,0 +1,24 @@
+summary: com.gs.switch testing
+id: switch
+description: 
+tasks:
+  - id: step1
+    fn: com.gs.switch
+    value: <%inputs.body.condition%>
+    cases:
+      FIRST:
+        id: 1st
+        fn: com.gs.return
+        args: "sukumar"
+      SECOND:
+        id: 2nd
+        fn: com.gs.return
+        args: "yaswanth"
+      THIRD:
+        id: 3rd
+        fn: com.gs.return
+        args: "pavan"
+    defaults:
+      id: default
+      fn: com.gs.return
+      args: <%"all"%> 

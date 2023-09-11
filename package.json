@@ -1,0 +1,44 @@
+{
+  "name": "gs-test-project",
+  "version": "1.0.0",
+  "description": "Integration test suit for @godspeedsystems/core package",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv ./src/index.ts",
+    "test": "tsc && mocha dist/test/index.js",
+    "clean": "rm -rf dist",
+    "compile": "tsc",
+    "gen-crud": "npx @godspeedsystems/api-generator",
+    "copy": "ts-node scripts/copy.ts",
+    "build": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.6",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.14.2",
+    "@types/socket.io": "^3.0.2",
+    "chai": "^4.3.8",
+    "concurrently": "^8.2.1",
+    "copyfiles": "^2.4.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "prisma": "^5.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@godspeedsystems/api-generator": "^2.0.2",
+    "@godspeedsystems/core": "^2.0.0-beta.3",
+    "@godspeedsystems/plugins-express-as-http": "^1.0.0-beta.5",
+    "@godspeedsystems/plugins-prisma-as-datastore": "^1.0.0-beta.4",
+    "@prisma/client": "^5.2.0",
+    "axios": "^1.5.0",
+    "dotenv": "^16.0.3",
+    "mocha": "^10.2.0",
+    "pino-pretty": "^10.2.0",
+    "redis": "^4.6.8"
+  }
+}

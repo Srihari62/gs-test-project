@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+# Ignore compiled TypeScript files
+/dist/
+*.js
+*.js.map
